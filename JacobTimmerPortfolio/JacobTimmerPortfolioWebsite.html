@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!--Color Pallete-->
+<style>
+    :root {
+        --blue-slate: #4f6069ff;
+        --slate-grey: #738A96ff;
+        --graphite: #333232ff;
+        --sand-dune: #e7ddc5ff;
+    }
+</style>
+
+<!--The head section contains meta information and the title of the page-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Timmer's Portfolio</title>
+
+    <style>
+    /* Class Definitions */
+    /* images */
+    .scaling-vertical-image-with-border { 
+        border: 3px solid var(--sand-dune);
+        align-content: center; 
+        max-width: 400px; 
+        margin: auto;
+    }
+    .scaling-horizontal-image-with-border { 
+        border: 3px solid var(--sand-dune);
+        align-content: left; 
+        max-width: auto;
+        max-height: 400px;   
+        margin: auto;
+        align-items: left;
+    }
+    .image-text-block-vertical {
+            margin-top: 10px;
+            max-width: 400px;
+    }
+    .image-text-block-horizontal {
+            margin-top: 10px;
+            max-width: 1000px;
+    }
+    .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    .tab {
+            background-color: var(--blue-slate);
+            color: var(--sand-dune);
+            border: 1px solid var(--sand-dune);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 5px;
+        }
+    .tab-active {
+        background-color: var(--slate-grey);
+    }
+    .tab-title{
+        color: var(--sand-dune);
+        text-align: left; 
+        font-size: 40px; 
+        margin-bottom: 40px;
+        margin-top: auto;
+    }
+    /* .category-title {
+        font-size: 20px;
+        margin: 2px;
+        color: var(--sand-dune);
+        font-style: italic;
+        text-decoration: underline;
+        text-decoration-color: var(--sand-dune);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+    } */
+    /*.tab-panel{
+        justify-content: left;
+    }*/
+    .portfolio-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+        width: 100%;
+    }
+    .portfolio-grid{
+        justify-content: left;
+        margin: auto;
+        width: 100%;
+    }
+    .line {
+            width: 100%;
+            height: 1px;
+            background-color: var(--sand-dune);
+            margin: 15px auto;
+    }
+    .artwork-title {
+            font-size: 22px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+    }
+    .art-details {
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: center;
+            margin-bottom: 3px;
+            margin-top: 1px;
+    }
+    .game-description{
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: center;
+            margin-bottom: 3px;
+            margin-top: 40px;
+    }
+    </style>
+
+    <style>
+        div { width:300px; margin:auto; }
+
+</style>
+</head>
+
+
+
+<!--All visible content goes here-->
+<body style="color: var(--sand-dune); background-color: var(--graphite); font-family: sans-serif; margin: 20px;">
+
+<!--Title-->
+<h1 style="text-align: center; font-size: 36px; font-family: sans-serif; color: var(--sand-dune); margin-bottom: 20px;">
+    Jacob Timmer's Portfolio
+</h1>
+
+<!--Line1-->
+<div class="line"></div>
+
+<!--Navigation Tabs-->
+<nav class="tabs" aria-label="Portfolio categories" style="text-align: center; margin-bottom: 20px;">
+  <button class="tab active" data-tab="games">Videogames</button>
+  <button class="tab" data-tab="achievements">Achievements & Awards</button>
+  <button class="tab" data-tab="artwork">Artwork</button>
+  <button class="tab" data-tab="code">Code Projects</button>
+</nav>
+
+<!--Line2-->
+<div class="line"></div>
+
+<!--Code Projects Tab-->
+<section id="code" class="tab-panel active"></section>
+<!--Games Tab-->
+<section id="games" class="tab-panel">
+    <h2 class="tab-title">Games:</h2>
+    <div class="portfolio-grid">
+        <article class="portfolio-card">
+            <!-- Claws Out! -->
+            <h4 class="artwork-title">Claws Out!</h4>
+            <p class="art-details"><i>Unity 2D, C#</i></p>
+            <img src="Public\GeneralImages\ClawsOutGameplay.webp" alt="Claws Out!" class="scaling-horizontal-image-with-border">
+            <div class="image-text-block-horizontal">
+                <p class="game-description">Rogue-like deckbuilder game with fully original art and music. Led a team of Cal Poly students to develop and publish within a span of four weeks. The game highlights each member's unique talents.</p>
+            </div>
+        </article>
+
+        <!--LineEndOfGames-->
+        <div class="line"></div>
+    </div>
+</section>
+
+<!--Artwork Tab-Panel-->
+<section id="artwork" class="tab-panel">
+    <h2 class="tab-title">Artwork:</h2>
+    <div class="portfolio-grid">
+        <article class="portfolio-card">
+            <!--Dinner-->
+            <h4 class="artwork-title">Dinner</h4>
+            <p class="art-details"><i>oil on canvas</i></p>
+            <img src="Public/Artwork/ACollegeDinner.webp" alt="Dinner" class="scaling-vertical-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Puffin-->
+            <h4 class = "artwork-title">Puffin</h4>
+            <p class="art-details"><i>oil on canvas</i></p>
+            <img src="Public\Artwork\Puffin.webp" alt="Puffin" class="scaling-horizontal-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Moth-->
+            <h4 class="artwork-title">Untitled</h4>
+            <p class="art-details"><i>ink on paper</i></p>
+            <img src="Public\Artwork\Moth.webp" alt="Moth" class="scaling-vertical-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Umber Skipper-->
+            <h4 class="artwork-title">Curiosity</h4>
+            <p class="art-details"><i>digital photography</i></p>
+            <img src="Public\Artwork\UmberSkipper.webp" alt="Umber Skipper" class="scaling-vertical-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Red Shouldered Hawk-->
+            <h4 class="artwork-title">Untitled</h4>
+            <p class="art-details"><i>digital photography</i></p>
+            <img src="Public\Artwork\RedShoulderedHawk.webp" alt="Red Shouldered Hawk" class="scaling-vertical-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Pugsley Sprite Sheet-->
+            <h4 class="artwork-title">Pugsley Animation Sprite Sheet</h4>
+            <p class="art-details"><i>pixel art</i></p>
+            <img src="Public\Artwork\PugsleySpriteSheet.webp" alt="Pugsley Sprite Sheet" class="scaling-horizontal-image-with-border">
+        </article>
+
+        <!--LineEndOfArtwork-->
+        <div class="line"></div>
+    </div>
+</section>
+
+</body>
+</html>
