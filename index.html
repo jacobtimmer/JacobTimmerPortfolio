@@ -19,28 +19,46 @@
 
     <style>
     /* Class Definitions */
-    /* images */
+    
+    .sentence {
+        font-size: 18px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .sub-sentence {
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 1px;
+    }
     .scaling-vertical-image-with-border { 
         border: 3px solid var(--sand-dune);
         align-content: center; 
-        max-width: 400px; 
-        margin: auto;
+        max-width: 450px; 
+        margin: 15px auto 15px;
     }
     .scaling-horizontal-image-with-border { 
         border: 3px solid var(--sand-dune);
         align-content: left; 
         max-width: auto;
-        max-height: 400px;   
-        margin: auto;
+        max-height: 450px;   
+        margin: 15px auto 15px;
+        align-items: left;
+    }
+    .scaling-large-image-with-border { 
+        border: 3px solid var(--sand-dune);
+        align-content: left; 
+        max-width: auto;
+        max-height: 600px;   
+        margin: 5px;
         align-items: left;
     }
     .image-text-block-vertical {
-            margin-top: 10px;
+            margin: 10px auto 0;
             max-width: 400px;
     }
     .image-text-block-horizontal {
-            margin-top: 10px;
-            max-width: 1000px;
+            margin: 15px auto 15px;
+            max-width: 800px;
     }
     .tabs {
             display: flex;
@@ -55,8 +73,8 @@
             cursor: pointer;
             font-size: 16px;
             margin-right: 5px;
-        }
-    .tab-active {
+    }
+    .tab.active {
         background-color: var(--slate-grey);
     }
     .tab-title{
@@ -66,19 +84,12 @@
         margin-bottom: 40px;
         margin-top: auto;
     }
-    /* .category-title {
-        font-size: 20px;
-        margin: 2px;
-        color: var(--sand-dune);
-        font-style: italic;
-        text-decoration: underline;
-        text-decoration-color: var(--sand-dune);
-        text-decoration-thickness: 1px;
-        text-underline-offset: 3px;
-    } */
-    /*.tab-panel{
-        justify-content: left;
-    }*/
+    .tab-panel{
+        display: none;
+    }
+    .tab-panel.active{
+        display: block;
+    }
     .portfolio-card {
         display: flex;
         flex-direction: column;
@@ -95,17 +106,18 @@
             width: 100%;
             height: 1px;
             background-color: var(--sand-dune);
-            margin: 15px auto;
+            margin: 30px auto;
     }
     .artwork-title {
-            font-size: 22px;
+            font-size: 26px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
             text-align: center;
             margin: 0;
     }
     .art-details {
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             text-align: center;
             margin-bottom: 3px;
             margin-top: 1px;
@@ -115,14 +127,13 @@
             margin-bottom: 5px;
             text-align: center;
             margin-bottom: 3px;
-            margin-top: 40px;
+            margin-top: 4px;
     }
     </style>
 
-    <style>
+    <!-- <style>
         div { width:300px; margin:auto; }
-
-</style>
+    </style> -->
 </head>
 
 
@@ -131,7 +142,7 @@
 <body style="color: var(--sand-dune); background-color: var(--graphite); font-family: sans-serif; margin: 20px;">
 
 <!--Title-->
-<h1 style="text-align: center; font-size: 36px; font-family: sans-serif; color: var(--sand-dune); margin-bottom: 20px;">
+<h1 style="text-align: center; font-size: 36px; font-family: sans-serif; color: var(--sand-dune); margin: 20px;">
     Jacob Timmer's Portfolio
 </h1>
 
@@ -140,17 +151,71 @@
 
 <!--Navigation Tabs-->
 <nav class="tabs" aria-label="Portfolio categories" style="text-align: center; margin-bottom: 20px;">
-  <button class="tab active" data-tab="games">Videogames</button>
-  <button class="tab" data-tab="achievements">Achievements & Awards</button>
-  <button class="tab" data-tab="artwork">Artwork</button>
-  <button class="tab" data-tab="code">Code Projects</button>
+    <button class="tab active" data-tab="code">About Me</button>
+    <button class="tab" data-tab="games">Games</button>
+    <button class="tab" data-tab="artwork">Artwork</button>
+    <button class="tab" data-tab="achievements">Awards</button>
 </nav>
 
 <!--Line2-->
 <div class="line"></div>
 
-<!--Code Projects Tab-->
-<section id="code" class="tab-panel active"></section>
+<!--About Me Tab-->
+<section id="code" class="tab-panel active">
+    <h2 class="tab-title">About Me:</h2>
+    <p class = "sentence">Computer Engineering student at Cal Poly San Luis Obispo, also getting a minor in Studio Art. Passionate about game design and always looking for challenges and projects to improve my skills.</p>
+
+    <p></p>
+    <p class = "sentence" style="font-size: 22px;"><b>Check out my:</b></p>
+    <p class = "sub-sentence"><b>LinkedIn:</b>&emsp;https://www.linkedin.com/in/jacob-timmer-5b4b8a298</p>
+    <p class = "sub-sentence"><b>GitHub:</b>&emsp;https://github.com/jacobtimmer</p>
+    <p class = "sub-sentence"><b>Itch.io:</b>&emsp;https://mantaray0001.itch.io</p>
+    <p class = "sub-sentence"><b>Email:</b>&emsp;jacobmtimmer@gmail.com</p>
+    <p></p>
+    <p></p>
+
+    <p class = "sentence" style="font-size: 22px;"><b>Some works that have inspired me:</b></p>
+    <article class="portfolio-card">
+        <p class = "sentence"><b>Game:&emsp;Rimworld</b></p>
+        <p class = "sub-sentence">A 2D sandbox colony-building and survival game. The amount of emergent gameplay, player expression, and replayability still blows me away. A huge inspiration for why I got into game design.</p>
+        <p class="art-details" style="margin: 5px 0;"><i>A screenshot from my current run.</i></p>
+        <img src="Public\GeneralImages\RimworldScreenshot.jpg" alt="RimworldScreenshot" class="scaling-large-image-with-border">
+        <p class = "sentence"></b>Game:&emsp;Diceomancer</b></p>
+        <p class = "sub-sentence">One of the best roguelike deckbuilders that I've played. The artstyle and gameplay have sered as an example of card game design.</p>
+        <img src="Public\GeneralImages\DiceOMancer.jpg" alt="DiceOMancer" class="scaling-large-image-with-border">
+        <p class = "sentence"><b>Novel:&emsp;The Fisherman by John Langan</b></p>
+        <p class = "sub-sentence">A very well-written horror novel about loss. I looked to this book as an example when I was writing my text-based game, hoping to achieve a similar quality.</p>
+        <img src="Public\GeneralImages\The_Fisherman_(novel).jpg" alt="The Fisherman" class="scaling-vertical-image-with-border">
+    </article>
+
+</section>
+
+<!--Awards-->
+<section id="achievements" class="tab-panel">
+    <h2 class="tab-title">Awards:</h2>
+    <div class="portfolio-grid">
+        <article class="portfolio-card">
+            <!--President's List-->
+            <h4 class="artwork-title">President's Honors List</h4>
+            <p class="art-details" style="margin: 15px 0;"><i>Awarded for a grade point average of 3.5 or better for an academic year. Received 2025 and 2026.</i></p>
+            <img src="Public\GeneralImages\President's Honors List2025.webp" alt="President's Honors List1" class="scaling-vertical-image-with-border">
+            <!--Space-->
+            <div style="margin: 15px 0;"></div>
+            <img src="Public\GeneralImages\President's Honors List2026.webp" alt="President's Honors List2" class="scaling-vertical-image-with-border">
+
+        </article>
+
+                <article class="portfolio-card">
+            <!--President's List-->
+            <h4 class="artwork-title">California Seal of Biliteracy</h4>
+            <p class="art-details" style="margin: 15px 0;"><i>Awarded for literacy in both English and Spanish. Received 2023.</i></p>
+
+        </article>
+
+        <!--LineEndOfAwards-->
+        <div class="line"></div>
+</section>
+
 <!--Games Tab-->
 <section id="games" class="tab-panel">
     <h2 class="tab-title">Games:</h2>
@@ -159,10 +224,25 @@
             <!-- Claws Out! -->
             <h4 class="artwork-title">Claws Out!</h4>
             <p class="art-details"><i>Unity 2D, C#</i></p>
-            <img src="Public\GeneralImages\ClawsOutGameplay.webp" alt="Claws Out!" class="scaling-horizontal-image-with-border">
             <div class="image-text-block-horizontal">
-                <p class="game-description">Rogue-like deckbuilder game with fully original art and music. Led a team of Cal Poly students to develop and publish within a span of four weeks. The game highlights each member's unique talents.</p>
+                <p class="game-description">Rogue-like deckbuilder game with fully original art and music. Led a team of Cal Poly students to fully develop and publish the game within a span of four weeks. The final product highlights each member's unique talents and contributions.</p>
             </div>
+            <img src="Public\GeneralImages\ClawsOutComicIntro.webp" alt="Claws Out!" class="scaling-horizontal-image-with-border">
+            <img src="Public\GeneralImages\ClawsOutGameplay.webp" alt="Claws Out!" class="scaling-horizontal-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!-- Claws Out! -->
+            <h4 class="artwork-title">Melancholy</h4>
+            <p class="art-details"><i>Inform7</i></p>
+            <div class="image-text-block-horizontal">
+                <p class="game-description">Text adventure horror game. The player has crash-landed onto a foreign planet. They emerge from their escape pod in an abandoned research facility, and must confront what remains. I'm particularly proud of the intensely grim final fight, which many players described as their most memorable moment.</p>
+            </div>
+            <img src="Public\GeneralImages\MelancholyScreenShot1.png" alt="Claws Out!" class="scaling-horizontal-image-with-border">
+            <img src="Public\GeneralImages\MelancholyBadEnding.png" alt="Claws Out!" class="scaling-horizontal-image-with-border">
+
+                        <p class="art-details" style="margin: 15px 0;"><i>Other games at https://mantaray0001.itch.io</i></p>
+
         </article>
 
         <!--LineEndOfGames-->
@@ -175,6 +255,14 @@
     <h2 class="tab-title">Artwork:</h2>
     <div class="portfolio-grid">
         <article class="portfolio-card">
+            <!--MothPainting-->
+            <p></p>
+            <h4 class="artwork-title">Angel (In Progress)</h4>
+            <p class="art-details"><i>oil on canvas</i></p>
+            <img src="Public\Artwork\MothPaintingWIP.webp" alt="Dinner" class="scaling-horizontal-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
             <!--Dinner-->
             <h4 class="artwork-title">Dinner</h4>
             <p class="art-details"><i>oil on canvas</i></p>
@@ -186,6 +274,13 @@
             <h4 class = "artwork-title">Puffin</h4>
             <p class="art-details"><i>oil on canvas</i></p>
             <img src="Public\Artwork\Puffin.webp" alt="Puffin" class="scaling-horizontal-image-with-border">
+        </article>
+
+        <article class="portfolio-card">
+            <!--Owl-->
+            <h4 class="artwork-title">Owl</h4>
+            <p class="art-details"><i>ink on paper</i></p>
+            <img src="Public\Artwork\Owl.webp" alt="Owl" class="scaling-horizontal-image-with-border">
         </article>
 
         <article class="portfolio-card">
@@ -221,5 +316,27 @@
     </div>
 </section>
 
+    <script>
+        const tabs = document.querySelectorAll(".tab");
+        const panels = document.querySelectorAll(".tab-panel");
+
+        function showTab(selectedTab) {
+            const targetId = selectedTab.dataset.tab;
+
+            tabs.forEach((tab) => {
+                tab.classList.toggle("active", tab === selectedTab);
+            });
+
+            panels.forEach((panel) => {
+                panel.classList.toggle("active", panel.id === targetId);
+            });
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+            showTab(tab);
+            });
+        });
+    </script>
 </body>
 </html>
