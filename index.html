@@ -186,10 +186,10 @@
         <p class = "sentence"><b>Game:&emsp;Rimworld</b></p>
         <p class = "sub-sentence">A 2D sandbox colony-building and survival game. The amount of emergent gameplay, player expression, and replayability still blows me away. A huge inspiration for why I got into game design.</p>
         <p class="art-details" style="margin: 5px 0;"><i>A screenshot from my current run.</i></p>
-        <img src="Public\GeneralImages\RimworldScreenshot.jpg" alt="RimworldScreenshot" class="scaling-large-image-with-border">
+        <img src="Public\GeneralImages\RimworldScreenshot.jpg" alt="RimworldScreenshot" class="scaling-horizontal-image-with-border">
         <p class = "sentence"></b>Game:&emsp;Diceomancer</b></p>
         <p class = "sub-sentence">One of the best roguelike deckbuilders that I've played. The artstyle and gameplay have sered as an example of card game design.</p>
-        <img src="Public\GeneralImages\DiceOMancer.jpg" alt="DiceOMancer" class="scaling-large-image-with-border">
+        <img src="Public\GeneralImages\DiceOMancer.jpg" alt="DiceOMancer" class="scaling-horizontal-image-with-border">
         <p class = "sentence"><b>Novel:&emsp;The Fisherman by John Langan</b></p>
         <p class = "sub-sentence">A very well-written horror novel about loss. I looked to this book as an example when I was writing my text-based game, hoping to achieve a similar quality.</p>
         <img src="Public\GeneralImages\The_Fisherman_(novel).jpg" alt="The Fisherman" class="scaling-vertical-image-with-border">
@@ -280,43 +280,42 @@
             <!--Puffin-->
             <h4 class = "artwork-title">Puffin</h4>
             <p class="art-details"><i>oil on canvas</i></p>
-            <img src="Public\Artwork\Puffin.webp" alt="Puffin" class="scaling-horizontal-image-with-border">
+            <img src="Public/Artwork/Puffin.webp" alt="Puffin" class="scaling-horizontal-image-with-border">
         </article>
 
         <article class="portfolio-card">
             <!--Owl-->
             <h4 class="artwork-title">Owl</h4>
             <p class="art-details"><i>ink on paper</i></p>
-            <img src="Public\Artwork\Owl.webp" alt="Owl" class="scaling-horizontal-image-with-border">
+            <img src="Public/Artwork/Owl.webp" alt="Owl" class="scaling-horizontal-image-with-border">
         </article>
 
         <article class="portfolio-card">
             <!--Moth-->
             <h4 class="artwork-title">Untitled</h4>
             <p class="art-details"><i>ink on paper</i></p>
-            <img src="Public\Artwork\Moth.webp" alt="Moth" class="scaling-vertical-image-with-border">
+            <img src="Public/Artwork/Moth.webp" alt="Moth" class="scaling-vertical-image-with-border">
         </article>
 
         <article class="portfolio-card">
             <!--Umber Skipper-->
             <h4 class="artwork-title">Curiosity</h4>
             <p class="art-details"><i>digital photography</i></p>
-            <img src="Public\Artwork\UmberSkipper.webp" alt="Umber Skipper" class="scaling-vertical-image-with-border">
+            <img src="Public/Artwork/UmberSkipper.webp" alt="Umber Skipper" class="scaling-vertical-image-with-border">
         </article>
 
         <article class="portfolio-card">
             <!--Red Shouldered Hawk-->
             <h4 class="artwork-title">Untitled</h4>
             <p class="art-details"><i>digital photography</i></p>
-            <img src="Public\Artwork\RedShoulderedHawk.webp" alt="Red Shouldered Hawk" class="scaling-vertical-image-with-border">
+            <img src="Public/Artwork/RedShoulderedHawk.webp" alt="Red Shouldered Hawk" class="scaling-vertical-image-with-border">
         </article>
 
         <article class="portfolio-card">
             <!--Pugsley Sprite Sheet-->
             <h4 class="artwork-title">Pugsley Animation Sprite Sheet</h4>
             <p class="art-details"><i>pixel art</i></p>
-            <img src="Public\Artwork\PugsleySpriteSheet.webp" alt="Pugsley Sprite Sheet" class="scaling-horizontal-image-with-border">
-        </article>
+            <img src="Public/Artwork/PugsleySpritesheet.webp" alt="Pugsley Sprite Sheet" class="scaling-horizontal-image-with-border">        </article>
 
         <!--LineEndOfArtwork-->
         <div class="line"></div>
@@ -324,6 +323,9 @@
 </section>
 
     <script>
+        //grabs all tabs and panels, and adds event listeners to each tab. 
+        //When a tab is clicked, it calls the showTab function to display the 
+        //corresponding panel and hide the others.
         const tabs = document.querySelectorAll(".tab");
         const panels = document.querySelectorAll(".tab-panel");
 
